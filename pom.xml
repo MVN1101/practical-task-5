@@ -105,7 +105,7 @@
                     <argLine>
                         -Xmx1024m
                         -Dfile.encoding=${encoding.type}
-                        -javaagent:"${settings.localRepository}/org/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar"
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar"
                     </argLine>
                     <systemPropertyVariables>
                         <allure.results.directory>${project.build.directory}/reports/allure-results
