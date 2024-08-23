@@ -2,6 +2,8 @@ package org.ibstraining.steps;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.ru.И;
+import io.cucumber.messages.types.Hook;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,10 +17,14 @@ import java.util.List;
 
 public class Steps {
 
-    private static WebDriver driver;
+//    private static WebDriver driver = Hooks.getDriver();
+//    private static WebDriverWait explicitWait = Hooks.getExplicitWait();
+    private WebDriver driver;
     private static WebDriverWait explicitWait;
+
     String[] productInputArray = new String[3];
 
+    @Step
     @И("открыта стриница по адресу {string}")
     public void открыта_стриница_по_адресу(String string) {
         driver = new ChromeDriver();
@@ -38,6 +44,7 @@ public class Steps {
                 "navbarDropdown", btnSendBox.getAttribute("id"),
                 "Не открылся выпадающий список " + string);
     }
+
     @И("нажата кнопка Товары")
     public void нажата_кнопка_товары() {
 //        Клик по полю "Товары"
@@ -67,10 +74,10 @@ public class Steps {
     }
 
     @И("заполняется поле наименование - {string}")
-    public void заполняется_поле_наименование(String fruitName) {
+    public void заполняется_поле_наименование(String productName) {
         WebElement fieldFruitName = driver.findElement(By.xpath("//input[@id='name']"));
-        fieldFruitName.sendKeys(fruitName);
-        productInputArray[0] = fruitName;
+        fieldFruitName.sendKeys(productName);
+        productInputArray[0] = productName;
     }
 
     @И("выбирается тип товара - {string}")
@@ -79,21 +86,24 @@ public class Steps {
         selectType.sendKeys(type);
         productInputArray[1] = type;
     }
+
     @И("устанавливается чекбокс Экзотический - {string}")
     public void устанавливается_чекбокс_экзотический(String isExotic) {
         WebElement checkBoxExotic = driver.findElement(By.xpath("//input[@type='checkbox']"));
-        if (isExotic.equals("true")) {checkBoxExotic.click();}
+        if (isExotic.equals("true")) {
+            checkBoxExotic.click();
+        }
         productInputArray[2] = isExotic;
     }
 
     @И("нажата кнопка Сохранить")
-    public void нажата_кнопка_сохранить(){
+    public void нажата_кнопка_сохранить() {
         WebElement btnSave = driver.findElement(By.id("save"));
         btnSave.click();
     }
 
-    @И("проверка корректности добавления товара")
-    public void проверка_корректности_добавления_товара() {
+    @И("проверка корректности добавления товара {string}")
+    public void проверка_корректности_добавления_товара(String productName) {
         //        Ожидание того, что таблица станет видимой после добавления товара
 
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tbody")));
@@ -112,12 +122,12 @@ public class Steps {
 
 //        Проверка корректности добавление в таблицу товара
         Assertions.assertArrayEquals(productInputArray, productValuesArray,
-                "Товар не был добавлен или добавлен некорректно");
-        System.out.println("Товар успешно доваблен");
+                "Товар " + productName + " не был добавлен или добавлен некорректно");
+        System.out.println("Товар " + productName + " успешно доваблен");
     }
 
     @И("закрытие сайта")
-    public void закрытие_сайта(){
+    public void закрытие_сайта() {
         driver.quit();
     }
 

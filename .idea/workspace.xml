@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db273e88-c471-48e5-80f0-3830dcb7433f" name="Changes" comment="создан пробный тест и настроен allure">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/Steps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="db273e88-c471-48e5-80f0-3830dcb7433f" name="Changes" comment="добавление allure в gitignore">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/Hooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/ibstraining/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/ExperimentalSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/Steps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/cucumberExperimantalSteps.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/cucumberExperimantalSteps.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,13 +47,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/vikto/IdeaProjects/practical-task-5",
+    "last_opened_file_path": "C:/Users/vikto/IdeaProjects/practical-task-5/src/test/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vikto\IdeaProjects\practical-task-5\src\test\resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="Cucumber Java.Feature: cucumberExperimantalSteps">
     <configuration name="Feature: cucumberExperimantalSteps" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
@@ -183,7 +187,21 @@
       <option name="project" value="LOCAL" />
       <updated>1724350200842</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="создан сценарий добавления товара">
+      <created>1724411201845</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724411201845</updated>
+    </task>
+    <task id="LOCAL-00006" summary="добавление allure в gitignore">
+      <created>1724411282111</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724411282111</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +220,8 @@
     <MESSAGE value="добавлены зависимости в poam" />
     <MESSAGE value="создан TestRunner" />
     <MESSAGE value="создан пробный тест и настроен allure" />
-    <option name="LAST_COMMIT_MESSAGE" value="создан пробный тест и настроен allure" />
+    <MESSAGE value="создан сценарий добавления товара" />
+    <MESSAGE value="добавление allure в gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление allure в gitignore" />
   </component>
 </project>
