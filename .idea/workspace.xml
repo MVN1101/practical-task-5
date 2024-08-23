@@ -57,7 +57,25 @@
       <recent name="C:\Users\vikto\IdeaProjects\practical-task-5\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: cucumberExperimantalSteps">
+  <component name="RunManager" selected="Cucumber Java.Feature: cucumberAddProductSteps">
+    <configuration name="Feature: cucumberAddProductSteps" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductSteps.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="practical-task-5" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: cucumberAddProductSteps" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Feature: cucumberExperimantalSteps" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cucumberExperimantalSteps.feature" />
@@ -134,6 +152,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Feature: cucumberAddProductSteps" />
       <item itemvalue="Cucumber Java.Feature: cucumberExperimantalSteps" />
       <item itemvalue="Cucumber Java.Scenario: " />
       <item itemvalue="Cucumber Java.Scenario: Добавление товара - сценарий 1" />
@@ -141,6 +160,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: cucumberAddProductSteps" />
         <item itemvalue="Cucumber Java.Feature: cucumberExperimantalSteps" />
         <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="Cucumber Java.Scenario: Добавление товара - сценарий 1" />
