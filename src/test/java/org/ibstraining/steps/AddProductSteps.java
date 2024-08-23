@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Steps {
+public class AddProductSteps {
 
     private WebDriver driver;
     private static WebDriverWait explicitWait;
@@ -27,7 +27,7 @@ public class Steps {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        driver.get("http://localhost:8080");
+        driver.get(string);
     }
 
     @И("выполнено нажатие на выпадающий список {string}")
