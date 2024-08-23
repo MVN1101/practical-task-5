@@ -1,8 +1,6 @@
 package org.ibstraining.steps;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.ru.И;
-import io.cucumber.messages.types.Hook;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
@@ -13,12 +11,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 
 public class Steps {
 
-//    private static WebDriver driver = Hooks.getDriver();
-//    private static WebDriverWait explicitWait = Hooks.getExplicitWait();
     private WebDriver driver;
     private static WebDriverWait explicitWait;
 
