@@ -14,23 +14,20 @@ import java.time.Duration;
 
 public class AddProductSteps {
 
-    private WebDriver driver;
-    private static WebDriverWait explicitWait;
+    private WebDriver driver  = Hooks.getDriver();;
+    private static WebDriverWait explicitWait = Hooks.getExplicitWait();;
 
     String[] productInputArray = new String[3];
 
-    @Step
-    @И("открыта стриница по адресу {string}")
-    public void открыта_стриница_по_адресу(String string) {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        driver.get(string);
-    }
 
-    @Step
+//    @И("открыта стриница по адресу {string}")
+//    public void открыта_стриница_по_адресу(String string) {
+//        driver = Hooks.getDriver();
+//        explicitWait = Hooks.getExplicitWait();
+//        driver.get(string);
+//    }
+
+
     @И("выполнено нажатие на выпадающий список {string}")
     public void выполнено_нажатие_на_выпадающий_список(String string) {
 //        Открытие выпадающего списка "Песочница"
@@ -41,7 +38,7 @@ public class AddProductSteps {
                 "Не открылся выпадающий список " + string);
     }
 
-    @Step
+
     @И("нажата кнопка Товары")
     public void нажата_кнопка_товары() {
 //        Клик по полю "Товары"
@@ -56,7 +53,6 @@ public class AddProductSteps {
         );
     }
 
-    @Step
     @И("нажата кнопка Добавить")
     public void нажата_кнопка_добавить() {
 //        Нажатие на кнопку "Добавить"
@@ -71,7 +67,6 @@ public class AddProductSteps {
                 "Не открылось окно добавления товара");
     }
 
-    @Step
     @И("заполняется поле наименование - {string}")
     public void заполняется_поле_наименование(String productName) {
         WebElement fieldFruitName = driver.findElement(By.xpath("//input[@id='name']"));
@@ -79,7 +74,6 @@ public class AddProductSteps {
         productInputArray[0] = productName;
     }
 
-    @Step
     @И("выбирается тип товара - {string}")
     public void выбирается_тип_товара(String type) {
         WebElement selectType = driver.findElement(By.xpath("//select[@id='type']"));
@@ -87,7 +81,7 @@ public class AddProductSteps {
         productInputArray[1] = type;
     }
 
-    @Step
+
     @И("устанавливается чекбокс Экзотический - {string}")
     public void устанавливается_чекбокс_экзотический(String isExotic) {
         WebElement checkBoxExotic = driver.findElement(By.xpath("//input[@type='checkbox']"));
@@ -97,14 +91,14 @@ public class AddProductSteps {
         productInputArray[2] = isExotic;
     }
 
-    @Step
+
     @И("нажата кнопка Сохранить")
     public void нажата_кнопка_сохранить() {
         WebElement btnSave = driver.findElement(By.id("save"));
         btnSave.click();
     }
 
-    @Step
+
     @И("проверка корректности добавления товара {string}")
     public void проверка_корректности_добавления_товара(String productName) {
         //        Ожидание того, что таблица станет видимой после добавления товара
@@ -128,7 +122,7 @@ public class AddProductSteps {
                 "Товар " + productName + " не был добавлен или добавлен некорректно");
         System.out.println("Товар " + productName + " успешно доваблен");
     }
-    @Step
+
     @И("удаление добавленной строки")
     public void удаление_добавленной_строки(){
         //        Открытие выпадающего списка "Песочница"
@@ -144,7 +138,6 @@ public class AddProductSteps {
 
     }
 
-    @Step
     @И("закрытие сайта")
     public void закрытие_сайта() {
         driver.quit();
