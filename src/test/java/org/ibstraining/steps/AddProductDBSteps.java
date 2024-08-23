@@ -3,9 +3,11 @@ package org.ibstraining.steps;
 import io.cucumber.java.ru.И;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.sql.*;
 import java.util.ArrayList;
+
 
 public class AddProductDBSteps {
 
@@ -13,8 +15,8 @@ public class AddProductDBSteps {
     private Statement statement;
     private String queryAllFromFood;
 
-    private int countOfRows;
-    private int id = countOfRows + 1;
+//    private int countOfRows;
+    private int id;
     private String productName;
     private String type;
     private int isExotic;
@@ -24,6 +26,7 @@ public class AddProductDBSteps {
 
 
     @Step
+    @Test
     @И("создание подключения к БД")
     public void создание_подключения_к_бд() throws SQLException {
 
@@ -33,7 +36,7 @@ public class AddProductDBSteps {
                 "pass");
 
         statement = connection.createStatement(
-                ResultSet.TYPE_SCROLL_SENSITIVE,
+                ResultSet.TYPE_SCROLL_INSENSITIVE,
                 ResultSet.CONCUR_READ_ONLY);
     }
 
@@ -44,15 +47,16 @@ public class AddProductDBSteps {
         queryAllFromFood = "SELECT FOOD_ID, FOOD_NAME, FOOD_TYPE, FOOD_EXOTIC FROM food";
         resultSet = statement.executeQuery(queryAllFromFood);
 
-//        Создание переменной для определения количества строк в таблице
-        resultSet.last();
-        countOfRows = resultSet.getRow();
+
+
     }
 
     @Step
     @И("создание товара {string}, {string}, экзотический - {string} для добавления в БД")
-    public void создание_товара_экзотический_для_добавления_в_бд(String string, String string2, String string3) {
-        id = countOfRows + 1;
+    public void создание_товара_экзотический_для_добавления_в_бд(String string, String string2, String string3) throws SQLException {
+        //        Создание переменной для определения количества строк в таблице
+        resultSet.last();
+        id = resultSet.getInt(1)+1;
         productName = string;
         type = string2;
         if (string3 == "нет") {
@@ -66,7 +70,7 @@ public class AddProductDBSteps {
         productToBeAddList.add(productName);
         productToBeAddList.add(type);
         productToBeAddList.add(isExotic);
-        System.out.println(productToBeAddList);
+        System.out.println("Добавляем товар: " + productToBeAddList);
     }
 
     @Step
@@ -92,7 +96,7 @@ public class AddProductDBSteps {
         productAddedList.add(fruitNameDB);
         productAddedList.add(typeDB);
         productAddedList.add(isExoticDB);
-        System.out.println(productAddedList);
+        System.out.println("В БД добавлен товар: " + productAddedList);
     }
 
     @Step

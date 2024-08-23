@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db273e88-c471-48e5-80f0-3830dcb7433f" name="Changes" comment="изенение наименования класса Steps">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/AddProductDBSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductDBSteps.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/ibstraining/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/AddProductDBSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/AddProductDBSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/AddProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/AddProductSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductDBSteps.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductDBSteps.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductSteps.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductSteps.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cucumber Java.Feature: cucumberAddProductDBSteps.executor": "Run",
+    "Cucumber Java.Feature: cucumberAddProductSteps.executor": "Run",
+    "Cucumber Java.Scenario: Добавление товара в БД.executor": "Run",
+    "JUnit.TestRunner.executor": "Run",
+    "Maven.practical-task-5 [io.qameta.allure:allure-maven:2.12.0:report].executor": "Run",
+    "Maven.practical-task-5 [io.qameta.allure:allure-maven:2.12.0:serve].executor": "Run",
+    "Maven.practical-task-5 [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.practical-task-5 [test...].executor": "Run",
+    "Maven.practical-task-5 [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -60,7 +72,13 @@
       <recent name="C:\Users\vikto\IdeaProjects\practical-task-5\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: cucumberAddProductDBSteps">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn test -Dcucumber.features=path/to/example.feature" />
+      <command value="mvn test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.plugin=pretty -Dcucumber.features=path/to/example.feature" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.TestRunner">
     <configuration name="Feature: cucumberAddProductDBSteps" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductDBSteps.feature" />
@@ -80,15 +98,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: cucumberExperimantalSteps" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: cucumberAddProductSteps" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cucumberExperimantalSteps.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductSteps.feature" />
       <option name="GLUE" value="org.ibstraining.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="practical-task-5" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: cucumberExperimantalSteps" />
+      <option name="SUGGESTED_NAME" value="Feature: cucumberAddProductSteps" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -120,15 +137,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: " type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Добавление товара в БД" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cucumberExperimantalSteps.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductDBSteps.feature" />
       <option name="GLUE" value="org.ibstraining.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="practical-task-5" />
-      <option name="NAME_FILTER" value="^$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: " />
+      <option name="NAME_FILTER" value="^Добавление товара в БД$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Добавление товара в БД$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Добавление товара в БД" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -156,19 +173,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Feature: cucumberAddProductSteps" />
+      <item itemvalue="Cucumber Java.Scenario: Добавление товара в БД" />
       <item itemvalue="Cucumber Java.Feature: cucumberAddProductDBSteps" />
-      <item itemvalue="Cucumber Java.Feature: cucumberExperimantalSteps" />
-      <item itemvalue="Cucumber Java.Scenario: " />
       <item itemvalue="Cucumber Java.Scenario: Добавление товара - сценарий 1" />
       <item itemvalue="JUnit.TestRunner" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: cucumberAddProductDBSteps" />
         <item itemvalue="JUnit.TestRunner" />
+        <item itemvalue="Cucumber Java.Scenario: Добавление товара в БД" />
+        <item itemvalue="Cucumber Java.Feature: cucumberAddProductSteps" />
+        <item itemvalue="Cucumber Java.Feature: cucumberAddProductDBSteps" />
         <item itemvalue="Cucumber Java.Scenario: Добавление товара - сценарий 1" />
-        <item itemvalue="Cucumber Java.Scenario: " />
-        <item itemvalue="Cucumber Java.Feature: cucumberExperimantalSteps" />
       </list>
     </recent_temporary>
   </component>
