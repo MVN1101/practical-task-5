@@ -21,7 +21,7 @@ public class AddProductSteps {
     @И("открыта страница тестового стенда")
     public void открыта_страница_тестового_стенда() {
 
-       driver = DriverManager.initDriver();
+       driver = DriverManagerJenkins.initDriver();
        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
