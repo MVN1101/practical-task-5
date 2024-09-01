@@ -5,15 +5,10 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
-import java.util.Map;
 
 
 public class AddProductSteps {
@@ -23,28 +18,11 @@ public class AddProductSteps {
 
     String[] productInputArray = new String[3];
 
-    @И("открыта стриница по адресу {string}")
-    public void открыта_стриница_по_адресу(String string) {
+    @И("открыта страница тестового стенда")
+    public void открыта_страница_тестового_стенда() {
 
-        try {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setBrowserName("chrome");
-            capabilities.setVersion("109.0");
-            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                    "enableVNC", true,
-                    "enableVideo", false
-            ));
-            URL selenoidUrl = new URL("http://149.154.71.152:4444/wd/hub");
-            driver = new RemoteWebDriver(selenoidUrl,capabilities);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        driver.get(string);
+       driver = DriverManager.initDriver();
+       explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     @И("выполнено нажатие на выпадающий список {string}")

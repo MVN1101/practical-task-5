@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db273e88-c471-48e5-80f0-3830dcb7433f" name="Changes" comment="изменение версии maven c 18 на 17">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/aplplication.properties" afterDir="false" />
+    <list default="true" id="db273e88-c471-48e5-80f0-3830dcb7433f" name="Changes" comment="Добавление удалненного драйвера selenoid">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/DriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/MyProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/AddProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/ibstraining/steps/AddProductSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductSteps.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductSteps.feature" afterDir="false" />
     </list>
@@ -67,6 +70,9 @@
       <recent name="C:\Users\vikto\IdeaProjects\practical-task-5\src\test\resources\features" />
       <recent name="C:\Users\vikto\IdeaProjects\practical-task-5\src\test\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vikto\IdeaProjects\practical-task-5\src\test\resources" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -74,7 +80,7 @@
       <command value="mvn test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.plugin=pretty -Dcucumber.features=path/to/example.feature" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: cucumberAddProductSteps">
+  <component name="RunManager" selected="JUnit.TestRunner">
     <configuration name="Feature: cucumberAddProductDBSteps" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/cucumberAddProductDBSteps.feature" />
@@ -177,8 +183,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: cucumberAddProductSteps" />
         <item itemvalue="JUnit.TestRunner" />
+        <item itemvalue="Cucumber Java.Feature: cucumberAddProductSteps" />
         <item itemvalue="Cucumber Java.Scenario: Добавление товара - сценарий 1" />
         <item itemvalue="Cucumber Java.Feature: cucumberAddProductDBSteps" />
         <item itemvalue="Cucumber Java.Scenario: Добавление товара в БД" />
@@ -267,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725199676416</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Добавление удалненного драйвера selenoid">
+      <option name="closed" value="true" />
+      <created>1725203855329</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725203855329</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +306,7 @@
     <MESSAGE value="попытка внедрить Hooks" />
     <MESSAGE value="Стабильная версия для проверки практического задания №5" />
     <MESSAGE value="изменение версии maven c 18 на 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменение версии maven c 18 на 17" />
+    <MESSAGE value="Добавление удалненного драйвера selenoid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление удалненного драйвера selenoid" />
   </component>
 </project>
